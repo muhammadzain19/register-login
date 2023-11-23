@@ -19,7 +19,6 @@
   margin-right: 10px;
 }
 .background-section {
-  z-index: -1;
     height: 400px; /* Set the height of your section */
     color: white; /* Set text color to be visible on the background image */
   }
@@ -418,6 +417,7 @@ nav{
   min-height: 100%;
 }
 .drop-nav {
+  
   height: 70px;
   width: 100%;
   display: flex;
@@ -442,6 +442,7 @@ nav .logo {
   font-weight: 500;
 }
 nav .sidebar {
+  z-index: 1;
   position: fixed;
   top: 0;
   left: -100%;
@@ -456,6 +457,7 @@ nav.open .sidebar {
   left: 0;
 }
 .sidebar .sidebar-content {
+  
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -464,6 +466,7 @@ nav.open .sidebar {
 }
 .sidebar-content .list {
   list-style: none;
+  
 }
 .list .nav-link {
   display: flex;
