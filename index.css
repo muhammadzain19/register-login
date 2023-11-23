@@ -1,0 +1,489 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wraper{
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+.background-section {
+  z-index: -1;
+    position: relative;
+    height: 400px; /* Set the height of your section */
+    color: white; /* Set text color to be visible on the background image */
+  }
+
+  .background-section img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 1500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place the image behind the content */
+  }
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background-size: cover;
+  padding: 25px;
+  margin-top: 45px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.container header {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 500;
+  text-align: start;
+}
+.container .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+
+}
+.form .input-box1 {
+    width: 100%;
+    margin-top: 0px;
+    
+  }
+.input-box label {
+  color: white;
+  
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: white;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+  background: none;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+  margin-left: 2px;
+}
+.gender-box h3 {
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+
+input[type="text"]::placeholder {
+    color: white; /* Set the desired color */
+  }
+  input[type="number"]::placeholder {
+    color: white; /* Set the desired color */
+  }
+.gender input {
+  accent-color: rgb(130, 106, 251);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: white;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: white;
+  background:none;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #ce9c2b;
+}
+.form button:hover {
+  background: #ce9c2b;
+  transform: scale(1.02) rotate(0deg);
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+    .background-section img {
+        height: 1700px;
+    }
+  }
+
+
+/*
+nav{
+    background: #151515;
+    padding: 5px 40px;
+  }
+  nav ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul li{
+    padding: 15px 0;
+    cursor: pointer;
+  }
+  nav ul li.items{
+    position: relative;
+    width: auto;
+    margin: 0 16px;
+    text-align: center;
+    order: 3;
+  }
+  nav ul li.items:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 5px;
+    height: 2px;
+    width: 100%;
+    background: #ce9c2b;
+    opacity: 0;
+    transition: all 0.2s linear;
+  }
+  nav ul li.items:hover:after{
+    opacity: 1;
+    bottom: 8px;
+  }
+  nav ul li.logo{
+    flex: 1;
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
+    cursor: default;
+    user-select: none;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    transition: .4s;
+  }
+  nav ul li:hover a{
+    color: #ce9c2b;
+  }
+  nav ul li i{
+    font-size: 23px;
+  }
+  nav ul li.btn{
+    display: none;
+  }
+  nav ul li.btn.hide i:before{
+    content: '\f00d';
+  }
+  @media all and (max-width: 900px){
+    nav{
+      padding: 5px 30px;
+    }
+    nav ul li.items{
+      width: 100%;
+      display: none;
+    }
+    nav ul li.items.show{
+      display: block;
+    }
+    nav ul li.btn{
+      display: block;
+    }
+    nav ul li.items:hover{
+      border-radius: 5px;
+      box-shadow: inset 0 0 5px #ce9c2b,
+                  inset 0 0 10px #ce9c2b;
+    }
+    nav ul li.items:hover:after{
+      opacity: 0;
+    }
+  }*/
+
+
+/*GHHFHJVKHVIH*/
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+
+.login-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.login-parent::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.login-wrapper {
+  width: 400px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.login-input-field {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin: 15px 0;
+}
+
+.login-label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+
+.login-input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+.login-input-field input:focus~label,
+.login-input-field input:valid~label {
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+}
+
+.login-forget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0 35px 0;
+  color: #fff;
+}
+
+.login-remember {
+  accent-color: #fff;
+}
+
+.forget-label{
+  display: flex;
+  align-items: center;
+}
+
+.login-forget-p{
+  margin-left: 8px;
+}
+
+.login-wrapper-a {
+  color: #efefef;
+  text-decoration: none;
+}
+
+.login-wrapper-a:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.login-button:hover {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.login-register {
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+.drop-nav-parent{
+  min-height: 100%;
+}
+.drop-nav {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  margin: 0 24px;
+}
+.logo .menu-icon {
+  color: #333;
+  font-size: 24px;
+  margin-right: 14px;
+  cursor: pointer;
+}
+.logo .logo-name {
+  color: #333;
+  font-size: 22px;
+  font-weight: 500;
+}
+nav .sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 260px;
+  padding: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+nav.open .sidebar {
+  left: 0;
+}
+.sidebar .sidebar-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 16px;
+}
+.sidebar-content .list {
+  list-style: none;
+}
+.list .nav-link {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  padding: 14px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.lists .nav-link:hover {
+  background-color: #4070f4;
+}
+.nav-link .icon {
+  margin-right: 14px;
+  font-size: 20px;
+  color: #707070;
+}
+.nav-link .link {
+  font-size: 16px;
+  color: #707070;
+  font-weight: 400;
+}
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link {
+  color: #fff;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 1000vh;
+  width: 200%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  background: rgba(0, 0, 0, 0.3);
+}
+nav.open ~ .overlay {
+  opacity: 1;
+  left: 260px;
+  pointer-events: auto;
+}
